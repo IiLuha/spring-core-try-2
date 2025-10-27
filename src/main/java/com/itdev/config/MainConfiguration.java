@@ -5,7 +5,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-//@EnableAspectJAutoProxy
+@EnableAspectJAutoProxy
 @PropertySource("classpath:application.properties")
 public class MainConfiguration {
 }
