@@ -28,10 +28,8 @@ public class UserService {
         String newLogin = Optional.of(login)
                 .filter(userRepository::loginNotContained)
                 .orElseThrow(() -> new LoginAlreadyExistException("Login " + login + " already exist."));
-        User user = User.builder()
-                .id(idSequence.generateNextId())
-                .login(newLogin)
-                .build();
+        User user = new User(idSequence.generateNextId(),
+                newLogin);
         Account acc = accountService.getDefaultAcc(user.getId());
         user.addAccount(acc);
         accountRepository.create(acc);

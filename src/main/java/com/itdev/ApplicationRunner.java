@@ -9,6 +9,6 @@ public class ApplicationRunner {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext("com.itdev");
         OperationsConsoleListener listener = context.getBean(OperationsConsoleListener.class);
-        listener.doListen(args);
+        listener.doListen();
     }
 }

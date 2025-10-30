@@ -1,6 +1,6 @@
-package com.itdev.listener;
+package com.itdev.listener.operation;
 
-public enum Operation {
+public enum ConsoleOperationType {
     ACCOUNT_CREATE,
     SHOW_ALL_USERS,
     ACCOUNT_CLOSE,

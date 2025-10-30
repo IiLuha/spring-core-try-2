@@ -41,11 +41,9 @@ public class AccountService {
     }
 
     public Account getDefaultAcc(Integer userId) {
-        return Account.builder()
-                .id(idSequence.generateNextId())
-                .userId(userId)
-                .moneyAmount(DEFAULT_AMOUNT)
-                .build();
+        return new Account(idSequence.generateNextId(),
+                userId,
+                DEFAULT_AMOUNT);
     }
 
     public Account create(Integer userId) {
